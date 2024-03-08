@@ -5,11 +5,12 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0);
-  let a = 0;
+  //let a = 0;
+  const a = useRef(0);
 
   useEffect(() => {
-    a=a+1;
-    console.log(`Re-rendering and the value of a is ${a}..`)
+    a.current =a.current+1;
+    console.log(`Re-rendering and the value of a is ${a.current}..`)
   });
 
   return (
